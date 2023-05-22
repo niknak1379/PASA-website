@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Persian American Student's Association</title>
-    <link rel="icon" type="image/png" href="/Assets/icon.PNG">
+    <link rel="icon" type="image/png" href="/Assets/PASA_logo.svg">
     <link rel="stylesheet" type="text/css" href="StyleSheets/main.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
@@ -11,19 +11,21 @@
             font-family: 'Josefin Sans', sans-serif;
         }
     </style>
+    <script src="/Scripts/nav.js" defer></script>
 </head>
 <body>
-    <header>
-        <img src="Assets/icon.PNG" alt="PASA logo" id="navLogo">
-        <nav>
-            <ul>
+    <header class="flex">
+        <img src="/Assets/PASA_logo.svg" alt="PASA logo" id="navLogo">
+        <button id="mobile-nav-toggle" data-toggled="false"></button>
+        <nav data-open="false">
+            <ul class="flex">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="ContactUs.html">Contact Us</a></li>
                 <li><a href="BoardApps.html">Board Applications</a></li>
             </ul>
         </nav>
     </header>
-    <main>
+    <main class='flex'>
         <section>
             <section id="clubIntro">
                 <h1>Persian American Student's Association</h1>
@@ -47,17 +49,17 @@
 
         <iframe src="https://www.instagram.com/pasa.ucsd/embed" id="instagramFrame" scrolling="no"></iframe>
     </main>
-    <footer>
+    <footer class="flex">
         <!--
         <a href="https://incredible-torrone-6331cf.netlify.app/">the online site rn for me only</a>
         -->
         <p>Persian American Student Association @UCSD</p>
-        <div id="socialIcons">
-            <a href="https://www.facebook.com/PASA.UCSANDIEGO/" target="_blank"><img src="Assets/facebook.png" alt="Facebook logo" class="social"></a>
+        <div id="socialIcons" class="flex">
+            <a href="https://www.facebook.com/PASA.UCSANDIEGO/" target="_blank"><img src="/Assets/icons8-facebook.svg" alt="Facebook logo" class="social"></a>
             &nbsp&nbsp
-            <a href="https://www.instagram.com/pasa.ucsd/" target="_blank"><img src="Assets/instagram.png" alt="Instagram logo" class="social"></a>
+            <a href="https://www.instagram.com/pasa.ucsd/" target="_blank"><img src="/Assets/icons8-instagram.svg" alt="Instagram logo" class="social"></a>
             &nbsp&nbsp
-            <a href="https://www.tiktok.com/@pasaucsd" target="_blank"><img src="Assets/tiktok.png" alt="TikTok logo" class="social"></a>
+            <a href="https://www.tiktok.com/@pasaucsd" target="_blank"><img src="/Assets/icons8-tiktok.svg" alt="TikTok logo" class="social"></a>
         </div>
         <p>pasaucsd@ucsd.edu</p>
     </footer>
