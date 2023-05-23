@@ -13,11 +13,14 @@ header{
 }
 nav{
     font-size: 1.2rem;
+    font-weight: bold;
     padding:0;
     margin:0;
+    background-color: hsl(0 0% 0% / 0.5);
+    backdrop-filter: blur(1rem);
 }
 
-ul {
+nav ul {
     list-style: none;
     --gap:2rem;
     margin: 20px;
@@ -26,12 +29,9 @@ ul {
     nav{
         position:fixed;
         inset: 0 0 0 30%;
-        background-color: hsl(0 0% 0% / 0.5);
         z-index: 900;
         transform: translateX(100%);
         transition: transform 350ms ease-in-out;
-        backdrop-filter: blur(1rem);
-
     }
     ul{
         flex-direction: column;
@@ -64,6 +64,7 @@ nav[data-open='true']{
 #mobile-nav-toggle[data-toggled='true']{
     background: url('/Assets/cross-small-svgrepo-com.svg');
     background-size: cover;
+    filter: invert(100%);
 }
 /*li:hover{
     background-color: var(--lighterGreen);
@@ -76,10 +77,12 @@ li a{
 }
 
 body{
-    margin: 5%;
     overflow-x:hidden;
+    background-color: #cdcdcd;
 }
-
+main{
+    margin: 5%;
+}
 iframe{
     border-radius: 8px;
     /*overflow:hiddenn
@@ -88,28 +91,51 @@ iframe{
 }
 footer{
     align-items: center;
-    justify-content: space-between;
-    background-color: var(--lightRed);
-    border-radius: 5px;
-    padding-left:20px;
-    padding-right:20px;
+    flex-direction: column;
+    background-color: white;
+    --gap:0rem;
+    flex-grow: 1;
 }
 #socialIcons{
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    --gap:0.3rem;
+    /*text-align: center;*/
+    --gap:0.5rem;
+    list-style: none;
+
+}
+#socialIcons a img{
+    border: 1px solid #ccc;
+    width:2em;
+    height:2em;
+    border-radius: 50%;
+    opacity:0.5;
+    padding:0.3em;
 }
 
+#socialIcons a img:hover{
+    opacity:1;
+}
+#footer{
+    --gap:1rem;
+    margin-top:1em;
+}
+#footerInfo{
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color:#cdcdcd;
+    width:80vw;
+}
 #navLogo{
     width:5rem;
     height:5rem;
     border-radius: 5px;
 }
-.social{
-    width:30px;
-    height:30px;
+#copyright{
+    color:#ccc;
+    font-size: 0.8rem;
+    opacity: 0.75;
 }
-
 .flex{
     display:flex;
     gap: var(--gap, 1rem);
